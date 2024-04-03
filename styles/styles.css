@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-primary: #8338EC;
+    --clr-secondary: #D96293;
+    --clr-dark: #3B3B3B;
+    --clr-slate: #8B8B8B;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.navigation-item {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Hero Section */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    margin-top: 50px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-description {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--light-gray);
+    margin: 20px 0;
+    width: 40pc;
+    line-height: 45px;
+    /* text-transform: uppercase; */
+}
+
+.hero-title, span {
+    font-size: 96px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+}
+
+span {
+    color: var(--primary);
+}
+
+.hero-subtitle {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+}
+
+button {
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    filter: drop-shadow(0 4px var(--light-gray));
+}
+
+.alt {
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+}
+
+.muted {
+    border-color: var(--acent);
+    background-color: var(--acent);
+}
+
+.hero-options {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-img {
+    height: 450px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--acent);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--primary);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--acent);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--acent);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
