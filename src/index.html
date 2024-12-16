@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet">
+
+    <title>Kwaku A. | Portfolio</title>
+  </head>
+  <body class="flex flex-col px-10 py-3 lg:px-64 lg:py-8">
+    
+    <!-- HEADER Section -->
+    <header class="pt-4">
+      <div class="flex justify-between">
+        <p class="uppercase font-bold">Kwaku.dev</p>
+        <nav>
+          <svg class="flex cursor lg:hidden" class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-justify"><path d="M3 12h18"/><path d="M3 18h18"/><path d="M3 6h18"/></svg>
+          <ul class="hidden gap-6 lg:flex ">
+            <li class="uppercase cursor-pointer" ><a href="#HERO">Home</a></li>
+            <li class="uppercase cursor-pointer"><a href="#ABOUT">About</a></li>
+            <li class="uppercase cursor-pointer"><a href="#PROJECTS">Projects</a></li>
+            <li class="uppercase cursor-pointer"><a href="#CONTACT">Resume</a></li>
+          </ul>
+        </nav>
+        <div class="hidden lg:flex">
+          <!-- Rounded switch -->
+          <label class="relative inline-block w-16 h-8">
+            <input type="checkbox" class="opacity-0 w-0 h-0 peer" />
+            <span
+              class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-all duration-400 peer-checked:bg-blue-500 peer-focus:ring-2 peer-focus:ring-blue-500"
+            ></span>
+            <span
+              class="absolute h-6 w-6 bg-white rounded-full left-1 bottom-1 transition-transform duration-400 peer-checked:translate-x-8"
+            ></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN HERO SECTION -->
+    <section class="h-screen" id="HERO">
+      <div class=" flex flex-col justify-around h-full">
+        <div class="flex flex-col justify-center items-center gap-4">
+          <div class="flex justify-center">
+            <img
+              class="w-1/2"
+              src="../assets/hero-image.png"
+              alt="memoji of Kwaku"
+            />
+          </div>
+          <p class="text-xl">Hi, I’m Kwaku 👋🏾 !</p>
+          <h1 class="uppercase text-center text-4xl lg:text-8xl">
+            <span class="text-extrabold text-purple-600">Full-Stack</span><br />
+            Engineer.
+          </h1>
+          <p class="w-[30ch]">
+            Passionate about building games, web, mobile, and sports-related
+            applications!
+          </p>
+          <div class="flex gap-3">
+            <button class="uppercase tracking-wide px-4 py-0.5 bg-[#3B3B3B] text-white rounded-md shadow-md">Let's Talk</button>
+            <button class="uppercase tracking-wide px-4 py-0.5 bg-[#D96293] text-white rounded-md shadow-md button--slate-dark">Browse Projects</button>
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="h-screen flex flex-col justify-center gap-6" id="ABOUT">
+        <div class="flex flex-col gap-3">
+            <h2>About Me</h2>
+            <p class="font-semibold text-[#8B8B8B] lg:text-4xl">
+                I’m a Ghanaian-American New York Native, born and raised in the Bronx. 
+                Video Games first sparked my interest in Software Engineering. Now I make various
+                types of applications that are fun, interesting, and useful!
+            </p>
+            <div class="about__skills-container">
+                <p class="uppercase font-semibold">Tech Stack</p>
+                <div class="flex flex-wrap gap-x-6 gap-y-3 uppercase">
+                    <div class="about__skill">
+                        <p class="about__skill-text">react</p>
+                    </div>
+                    <div class="about__skill">
+                        <p class="about__skill-text">javaScript</p>
+                    </div>
+                    <div class="about__skill">
+                        <p class="about__skill-text">python</p>
+                    </div>
+                    <div class="about__skill">
+                        <p class="about__skill-text">node.js</p>
+                    </div>
+                    <div class="about__skill">
+                        <p class="about__skill-text">html</p>
+                    </div>
+                    <div class="about__skill">
+                        <p class="about__skill-text">css</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__accolades-container">
+            <div class="about__accolade">
+                <p class="about__accolade-icon">3X</p>
+                <p class="about__accolade-subtitle">Google Intern</p>
+            </div>
+            <div class="about__accolade">
+                <svg class="about__accolade-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dribbble"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/></svg>
+                <p class="about__accolade-subtitle">Sports Analytics Minor</p>
+            </div>
+            <div class="about__accolade">
+                <svg class="about__accolades-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-ruler"><path d="m15 5 4 4"/><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/><path d="m8 6 2-2"/><path d="m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5Z"/><path d="m18 16 2-2"/><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17"/></svg>
+                <p class="about__accolade-subtitle">HS + College TA</p>
+            </div>
+            <div class="about__accolade">
+                <svg class="about__accolades-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                <p class="about__accolade-title">2024</p>
+                <p class="about__accolade-subtitle">Syracuse Computer Science Graduate</p>
+            </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="h-screen" id="PROJECTS"></section>
+
+    <!-- HIRTING SECTION -->
+    <section class="h-screen" id="CONTACT"></section>
+
+    <!-- FOOTER SECTION -->
+    <footer></footer>
+  </body>
+</html>
