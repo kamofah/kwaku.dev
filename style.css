@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23FFFFFF" width="25px" height="25px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+    background-color: black;
+    color: white;
+    font-family: "Inter", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+svg {
+    height: 30px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.button {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 12rem;
+}
+
+.button:hover {
+    /* color: white; */
+    /* background-color: rgb(118, 50, 173); */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 55px;
+    letter-spacing: 2px;
+    background-color: white;
+    color: black;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 16px;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+}
+
+.menu--options {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero--container {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.hero--title {
+    font-size: 80px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+.hero--subtitle {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.button--contianer {
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about--container {
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about--header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about--header-title {
+    font-size: 40px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+.about--header-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+
+.about--content-container {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.about--content {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.about--content-text {
+    width: 40ch;
+}
+
+.skills--content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills--container-title, .about--content-heading {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 500px;
+
+}
+
+.skill {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.disclaimer--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.disclaimer--title {
+    font-size: 80px;
+}
+
+.disclaimer--text {
+    width: 70ch;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.project--title {
+    font-size: 80px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project--subtitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+}
+
+.icon-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer--text-container {
+    border-top: 1px solid white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+}
