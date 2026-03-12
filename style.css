@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: "Satoshi";
+    src: url("./assets/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
 
+:root {
+    --primary-color: 	#ca1f0c;
+    --color-neutral-0: #F5F5F5; /* white */
+    --color-neutral-900: #000000; /* black */
+    --color-bg-muted: rgb(23 23 23);; /* light gray */
+}
+
+/* GLOBAL STYLES */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -10,10 +24,10 @@ html {
 }
 
 body {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23FFFFFF" width="25px" height="25px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
-    background-color: black;
-    color: white;
-    font-family: "Inter", serif;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23000000" width="25px" height="25px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-900);
+    font-family: "Satoshi", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,12 +53,60 @@ a {
     text-decoration: none;
 }
 
-.icon-link, .icon-link:visited, .icon-link:active {
-    color: white;
-    text-decoration: none;
+label {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+input, select, textarea {
+    font-family: "Satoshi", serif;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dedede;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-900);
+    width: 100%;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23000000" width="25px" height="25px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+}
+
+nav {
+    letter-spacing: 2px;
+}
+
+section, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 100vh;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .button {
+    background-color: #dedede;
     cursor: pointer;
     padding: 20px;
     border-radius: 5px;
@@ -57,23 +119,11 @@ a {
 }
 
 .button:hover {
-    /* color: white; */
-    /* background-color: rgb(118, 50, 173); */
+    color: white;
+    background-color: var(--primary-color);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 55px;
-    letter-spacing: 2px;
-    background-color: white;
-    color: black;
-}
-
+/* HEADER STYLES */
 .logo-section {
     display: flex;
     align-items: center;
@@ -81,32 +131,46 @@ header {
 }
 
 .logo-img {
-    width: 55px;
-    height: 55px;
-    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 1.05rem;
 }
 
 .menu {
     display: flex;
+    align-items: center;
     gap: 50px;
 }
 
 .menu--options {
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 0.95rem;
     cursor: pointer;
-    color: black;
+    color: var(--color-neutral-900);
 }
 
 .menu--options:hover {
-    color: rgb(56, 110, 211);
+    color: var(--primary-color);
 }
 
+.menu-cta {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+    padding: 15px 20px;
+    border-radius: 99px;
+}
+
+.menu-cta:hover {
+    color: var(--color-neutral-0);
+    background-color: var(--primary-color);
+}
+/* HERO STYLES */
 .hero {
     height: 100vh;
     display: flex;
@@ -123,8 +187,10 @@ header {
 }
 
 .hero--title {
-    font-size: 80px;
-    letter-spacing: 8px;
+    font-size: 4rem;
+    width: 20ch;
+    /* text-align: left; */
+    /* letter-spacing: 8px; */
     font-weight: bold;
 }
 
@@ -133,16 +199,13 @@ header {
     letter-spacing: 2px;
 }
 
-.button--contianer {
+.button--container {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
-.about {
-    display: flex;
-    justify-content: center;
-}
-
+/* ABOUT STYLES */
 .about--container {
     display: flex;
     gap: 60px;
@@ -202,31 +265,21 @@ header {
     gap: 20px;
     flex-wrap: wrap;
     max-width: 500px;
-
 }
 
 .skill {
-    background-color: #1F1F1F;
+    background-color: var(--color-bg-muted);
+    color: var(--color-neutral-0);
     padding: 20px;
     border-radius: 5px;
 }
 
-.disclaimer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
+/* DISCLAIMER STYLES */
 .disclaimer--container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-}
-
-.disclaimer--title {
-    font-size: 80px;
 }
 
 .disclaimer--text {
@@ -236,13 +289,10 @@ header {
     text-align: center;
 }
 
-.projects {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-}
-
-.project--title {
+.project--title,
+.disclaimer--title,
+.tech-stack--title,
+.contact--title {
     font-size: 80px;
     letter-spacing: 8px;
     text-transform: uppercase;
@@ -254,12 +304,7 @@ header {
     font-size: 18px;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
+/* FOOTER STYLES */
 .footer--container {
     display: flex;
     flex-direction: column;
@@ -268,7 +313,7 @@ footer {
     width: 60%;
 }
 
-.icon-list {
+.icon-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -276,8 +321,25 @@ footer {
     gap: 10px;
 }
 
+.icons-list {
+    display: flex;
+    gap: 4px;
+}
+
+.icon-link,
+.icon-link:visited,
+.icon-link:active {
+    color: var(--color-neutral-0);
+    text-decoration: none;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
 .footer--text-container {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--color-neutral-0);
     text-align: center;
     padding-top: 20px;
     font-size: 12px;
