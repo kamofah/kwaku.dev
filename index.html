@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <title>kwaku.dev</title>
+  <title>KWAKU.DEV</title>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
     <div class="logo-section">
-      <!-- <img class="logo-img" src="./assets/Afrotech Picture.jpg" alt="A headshot of Kwaku"> -->
       <h1 class="logo">kwaku.dev</h1>
     </div>
     <nav>
@@ -30,24 +29,32 @@
     <section class="hero" id="HOME">
       <div class="hero--container">
         <p class="hero--subtitle">NYC Based Software Engineer</p>
-        <p class="hero--title">building modern software experiences.</p>
+        <h1 class="hero--title">building modern software experiences.</h1>
         <div class="button--container">
           <button class="button">Projects</button>
           <button class="button">Contact Me</button>
         </div>
       </div>
+      <!-- <div class="scroll-indicator-container">
+        <div class="scroll-indicator-icon">
+          
+        </div>
+        <div class="scroll-indicator-text">
+          <p>Scroll down</p>
+        </div>
+      </div> -->
     </section>
 
     <!-- ABOUT -->
     <section class="about" id="ABOUT">
       <div class="about--container">
         <div class="about--header">
-          <h3 class="about--header-title">About Me</h3>
+          <h2 class="about--header-title">About</h2>
           <!-- <p class="about--header-subtitle">NYC Based Software Engineer</p> -->
         </div>
         <div class="about--content-container">
           <div class="about--content">
-            <p class="about--content-heading">BACKGROUND</p>
+            <h3 class="about--content-heading">BACKGROUND</h3>
             <p class="about--content-text">
               👋🏾 Hi, I’m Kwaku — a software engineer and product builder based in NYC.<br><br>
               I previously worked at Google on the Ads team, building scalable,
@@ -58,9 +65,12 @@
               products that scale well and fit naturally into everyday life.
             </p>
           </div>
-          <div class="skills--container">
+          <div class="about--content">
+            <img class="about--content-img" src="./assets/Afrotech Picture.jpg" alt="A headshot of Kwaku">
+          </div>
+          <!-- <div class="skills--container">
             <div class="skills--content">
-              <p class="skills--container-title">SKILLS</p>
+              <h3 class="skills--container-title">SKILLS</h3>
               <ul class="skill-list">
                 <li class="skill">JavaScript/TypeScript</li>
                 <li class="skill">React</li>
@@ -77,7 +87,7 @@
                 <li class="skill">Python</li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -85,7 +95,7 @@
     <!-- TECH STACK -->
     <section class="tech-stack">
       <div class="tech-stack--container">
-        <h3 class="tech-stack--title">Tech Stack</h3>
+        <h2 class="tech-stack--title">Tech Stack</h2>
         <ul class="tech-stack--list">
           <li class="tech-stack--item"><img src="./assets/icons/typescript-logo.svg" alt="TypeScript"></li>
           <li class="tech-stack--item"><img src="./assets/icons/react-logo.svg" alt="React"></li>
@@ -103,30 +113,49 @@
         </ul>
       </div>
     </section>
-
-    <!-- DISCLAIMER -->
-    <section class="disclaimer">
-      <div class="disclaimer--container">
-        <h3 class="disclaimer--title">Disclaimer</h3>
-        <p class="disclaimer--text">
-          This website is a work in progress, reflecting my ongoing journey of learning and growth. I am actively working to showcase my projects, make relevant GitHub repositories public,
-          and provide additional valuable resources. As I continue to expand my skills and take on new challenges, this platform will evolve to mirror that progression. Your patience and support during this process mean the world to me.
-            Thank you for being part of this journey as I build something that truly represents my dedication to continuous improvement and innovation.
-        </p>
-      </div>
-    </section>
     
-    <!-- PROJECTS -->
-    <section class="projects" id="PROJECTS">
-      <div class="projects--container">
-        <p class="project--title">Selected Works</p>
-        <p class="project--subtitle">Take a look at what I've been working on:</p>
+    <!-- SELECTED WORKS -->
+    <section class="selected-works" id="SELECTED WORKS">
+      <div class="selected-works--container">
+        <h2 class="selected-works--title">Selected Works</h2>
+      </div>
+      <div class="selected-works--content-container">
+        <div class="selected-works--index">
+          <ul class="selected-works--index-list">
+            <li class="selected-works--index-item">Queued Up</li>
+            <li class="selected-works--index-item">BeHold</li>
+            <li class="selected-works--index-item">Prelude</li>
+            <li class="selected-works--index-item">Candid</li>
+          </ul>
+        </div>
+        <div class="selected-works--preview">
+          <div class="selected-works--preview-item">
+            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+            <div class="selected-works--preview-metadata">
+              <h3 class="selected-works--preview-title">Queued Up</h3>
+              <ul class="selected-works--preview-tech-stack">
+                <li class="selected-works--preview-metadata-item">React</li>
+                <li class="selected-works--preview-metadata-item">TypeScript</li>
+                <li class="selected-works--preview-metadata-link">View App</li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="selected-works--preview-item">
+            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          </div> -->
+          <!-- <div class="selected-works--preview-item">
+            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          </div>
+          <div class="selected-works--preview-item">
+            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          </div> -->
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="CONTACT">
-      <p class="contact--title">contact</p>
+      <h2 class="contact--title">contact</h2>
       <p class="contact--subtitle">Get in touch with me:</p>
       <form class="contact--form" action="https://formspree.io/f/xgedgpyk" method="POST">
         <label for="name">Name</label>
@@ -145,8 +174,8 @@
           <option value="Other">Other</option>
         </select>
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <textarea id="message" name="message" placeholder="Message" rows="8" required></textarea>
+        <button class="contact--button" type="submit">Send Message</button>
       </form>
     </section>
   </main>
