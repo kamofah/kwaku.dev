@@ -10,16 +10,24 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="logo-section">
-      <h1 class="logo">kwaku.dev</h1>
+  <header class="site-header">
+    <div class="site-header__brand">
+      <h1 class="site-header__wordmark">kwaku.dev</h1>
     </div>
-    <nav>
-      <ul class="menu">
-        <li class="menu--options"><a href="#HOME">Home</a></li>
-        <li class="menu--options"><a href="#ABOUT">About</a></li>
-        <li class="menu--options"><a href="#PROJECTS">Projects</a></li>
-        <li class="menu--options menu-cta"><a href="#CONTACT">Get in touch</a></li>
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul class="site-header__menu">
+        <li class="site-header__menu-item">
+          <a class="site-header__link" href="#HOME">Home</a>
+        </li>
+        <li class="site-header__menu-item">
+          <a class="site-header__link" href="#ABOUT">About</a>
+        </li>
+        <li class="site-header__menu-item">
+          <a class="site-header__link" href="#SELECTED_WORKS">Selected Works</a>
+        </li>
+        <li class="site-header__menu-item">
+          <a class="cta" href="#CONTACT">Get in touch</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -27,12 +35,15 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="HOME">
-      <div class="hero--container">
-        <p class="hero--subtitle">NYC Based Software Engineer</p>
-        <h1 class="hero--title">building modern software experiences.</h1>
-        <div class="button--container">
-          <button class="button">Projects</button>
-          <button class="button">Contact Me</button>
+      <div class="hero__content">
+        <p class="hero__tagline">Hi, I'm Kwaku 👋</p>
+        <h1 class="hero__display-name">
+          Fullstack <span class="hero__emphasis">&</span><br>
+          mobile <span class="hero__emphasis">engineer.</span>
+        </h1>
+        <div class="hero__actions">
+          <a class="cta" href="#CONTACT">Get in touch</a>
+          <a class="cta cta--outline" href="#SELECTED_WORKS">View Selected Works</a>
         </div>
       </div>
       <!-- <div class="scroll-indicator-container">
@@ -47,15 +58,15 @@
 
     <!-- ABOUT -->
     <section class="about" id="ABOUT">
-      <div class="about--container">
-        <div class="about--header">
-          <h2 class="about--header-title">About</h2>
-          <!-- <p class="about--header-subtitle">NYC Based Software Engineer</p> -->
+      <div class="about__layout">
+        <div class="about__intro">
+          <h2 class="about__title">About</h2>
+          <!-- <p class="about__subtitle">NYC Based Software Engineer</p> -->
         </div>
-        <div class="about--content-container">
-          <div class="about--content">
-            <h3 class="about--content-heading">BACKGROUND</h3>
-            <p class="about--content-text">
+        <div class="about__columns">
+          <div class="about__column">
+            <h3 class="about__section-heading">BACKGROUND</h3>
+            <p class="about__copy">
               👋🏾 Hi, I’m Kwaku — a software engineer and product builder based in NYC.<br><br>
               I previously worked at Google on the Ads team, building scalable,
               data-driven and A/B tested Ad formats.
@@ -65,26 +76,26 @@
               products that scale well and fit naturally into everyday life.
             </p>
           </div>
-          <div class="about--content">
-            <img class="about--content-img" src="./assets/Afrotech Picture.jpg" alt="A headshot of Kwaku">
+          <div class="about__column">
+            <img class="about__portrait" src="./assets/Afrotech Picture.jpg" alt="A headshot of Kwaku">
           </div>
-          <!-- <div class="skills--container">
-            <div class="skills--content">
-              <h3 class="skills--container-title">SKILLS</h3>
-              <ul class="skill-list">
-                <li class="skill">JavaScript/TypeScript</li>
-                <li class="skill">React</li>
-                <li class="skill">Next.JS</li>
-                <li class="skill">React Native (Expo)</li>
-                <li class="skill">Tailwind</li>
-                <li class="skill">Node.JS</li>
-                <li class="skill">Express</li>
-                <li class="skill">PostgreSQL</li>
-                <li class="skill">Prisma</li>
-                <li class="skill">Supabase</li>
-                <li class="skill">Clerk</li>
-                <li class="skill">Git/Github</li>
-                <li class="skill">Python</li>
+          <!-- <div class="about__skills">
+            <div class="about__skills-inner">
+              <h3 class="about__skills-heading">SKILLS</h3>
+              <ul class="about__skill-list">
+                <li class="about__skill-tag">JavaScript/TypeScript</li>
+                <li class="about__skill-tag">React</li>
+                <li class="about__skill-tag">Next.JS</li>
+                <li class="about__skill-tag">React Native (Expo)</li>
+                <li class="about__skill-tag">Tailwind</li>
+                <li class="about__skill-tag">Node.JS</li>
+                <li class="about__skill-tag">Express</li>
+                <li class="about__skill-tag">PostgreSQL</li>
+                <li class="about__skill-tag">Prisma</li>
+                <li class="about__skill-tag">Supabase</li>
+                <li class="about__skill-tag">Clerk</li>
+                <li class="about__skill-tag">Git/Github</li>
+                <li class="about__skill-tag">Python</li>
               </ul>
             </div>
           </div> -->
@@ -93,61 +104,82 @@
     </section>
 
     <!-- TECH STACK -->
-    <section class="tech-stack">
-      <div class="tech-stack--container">
-        <h2 class="tech-stack--title">Tech Stack</h2>
-        <ul class="tech-stack--list">
-          <li class="tech-stack--item"><img src="./assets/icons/typescript-logo.svg" alt="TypeScript"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/react-logo.svg" alt="React"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/nextjs-logo.svg" alt="Next.JS"></li>
-          <!-- <li class="tech-stack--item"><img src="./assets/icons/node-logo.html" alt="Node.js"></li> -->
-          <li class="tech-stack--item"><img src="./assets/icons/postgresql-logo.svg" alt="PostgreSQL"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/prisma-logo.svg" alt="Prisma"></li>
+    <section class="tech-stack" id="TECH_STACK">
+      <div class="tech-stack__inner">
+        <h2 class="tech-stack__title">Tech Stack</h2>
+        <ul class="tech-stack__list">
+          <li class="tech-stack__item"><img src="./assets/icons/typescript-logo.svg" alt="TypeScript"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/react-logo.svg" alt="React"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/nextjs-logo.svg" alt="Next.JS"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/postgresql-logo.svg" alt="PostgreSQL"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/prisma-logo.svg" alt="Prisma"></li>
 
-          <!-- <li class="tech-stack--item"><img src="./assets/icons/express-logo.svg" alt="Express"></li> -->
-          <li class="tech-stack--item"><img src="./assets/icons/expo-logo.svg" alt="React Native"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/tailwind-logo.svg" alt="Tailwind"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/clerk-logo.svg" alt="Clerk"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/supabase-logo.svg" alt="Supabase"></li>
-          <li class="tech-stack--item"><img src="./assets/icons/github-logo.svg" alt="Git"></li>
+          <!-- <li class="tech-stack__item"><img src="./assets/icons/express-logo.svg" alt="Express"></li> -->
+          <li class="tech-stack__item"><img src="./assets/icons/expo-logo.svg" alt="React Native"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/tailwind-logo.svg" alt="Tailwind"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/clerk-logo.svg" alt="Clerk"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/supabase-logo.svg" alt="Supabase"></li>
+          <li class="tech-stack__item"><img src="./assets/icons/github-logo.svg" alt="Git"></li>
         </ul>
       </div>
     </section>
     
     <!-- SELECTED WORKS -->
-    <section class="selected-works" id="SELECTED WORKS">
-      <div class="selected-works--container">
-        <h2 class="selected-works--title">Selected Works</h2>
+    <section class="work-showcase" id="SELECTED_WORKS">
+      <div class="work-showcase__intro">
+        <h2 class="work-showcase__title">Selected Works</h2>
       </div>
-      <div class="selected-works--content-container">
-        <div class="selected-works--index">
-          <ul class="selected-works--index-list">
-            <li class="selected-works--index-item">Queued Up</li>
-            <li class="selected-works--index-item">BeHold</li>
-            <li class="selected-works--index-item">Prelude</li>
-            <li class="selected-works--index-item">Candid</li>
+      <div class="work-showcase__layout">
+        <div class="work-showcase__table-of-contents">
+          <ul class="work-showcase__table-of-contents-list">
+            <li class="work-showcase__table-of-contents-item">Queued Up</li>
+            <li class="work-showcase__table-of-contents-item">BeHold</li>
+            <li class="work-showcase__table-of-contents-item">Prelude</li>
+            <li class="work-showcase__table-of-contents-item">MAWB</li>
           </ul>
         </div>
-        <div class="selected-works--preview">
-          <div class="selected-works--preview-item">
-            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
-            <div class="selected-works--preview-metadata">
-              <h3 class="selected-works--preview-title">Queued Up</h3>
-              <ul class="selected-works--preview-tech-stack">
-                <li class="selected-works--preview-metadata-item">React</li>
-                <li class="selected-works--preview-metadata-item">TypeScript</li>
-                <li class="selected-works--preview-metadata-link">View App</li>
+        <div class="work-showcase__work-items">
+          <div class="work-showcase__project">
+            <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+            <div class="work-showcase__project-header">
+              <h3 class="work-showcase__project-title">Queued Up</h3>
+              <ul class="work-showcase__tags">
+                <li class="work-showcase__tag">React</li>
+                <li class="work-showcase__tag">TypeScript</li>
+                <li><a class="work-showcase__tag work-showcase__tag--link" href="#">View App</a></li>
               </ul>
             </div>
+            <div class="work-showcase__project">
+              <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+              <div class="work-showcase__project-header">
+                <h3 class="work-showcase__project-title">BeHold</h3>
+                <ul class="work-showcase__tags">
+                  <li class="work-showcase__tag">React Native</li>
+                  <li class="work-showcase__tag">TypeScript</li>
+                  <li><a class="work-showcase__tag work-showcase__tag--link" href="#">View App</a></li>
+                </ul>
+              </div>
+              <div class="work-showcase__project">
+                <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+                <div class="work-showcase__project-header">
+                  <h3 class="work-showcase__project-title">Prelude</h3>
+                  <ul class="work-showcase__tags">
+                    <li class="work-showcase__tag">React</li>
+                    <li class="work-showcase__tag">TypeScript</li>
+                    <li class="work-showcase__tag">Supabase</li>
+                    <li><a class="work-showcase__tag work-showcase__tag--link" href="#">View App</a></li>
+                  </ul>
+                </div>
+              </div>
           </div>
-          <!-- <div class="selected-works--preview-item">
-            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          <!-- <div class="work-showcase__project">
+            <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
           </div> -->
-          <!-- <div class="selected-works--preview-item">
-            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          <!-- <div class="work-showcase__project">
+            <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
           </div>
-          <div class="selected-works--preview-item">
-            <img class="selected-works--preview-img" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
+          <div class="work-showcase__project">
+            <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
           </div> -->
         </div>
       </div>
@@ -155,9 +187,9 @@
 
     <!-- CONTACT -->
     <section class="contact" id="CONTACT">
-      <h2 class="contact--title">contact</h2>
-      <p class="contact--subtitle">Get in touch with me:</p>
-      <form class="contact--form" action="https://formspree.io/f/xgedgpyk" method="POST">
+      <h2 class="contact__title">contact</h2>
+      <p class="contact__lead">Get in touch with me:</p>
+      <form class="contact__form" action="https://formspree.io/f/xgedgpyk" method="POST">
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Name" required/> 
         <label for="email">Email</label>
@@ -175,23 +207,41 @@
         </select>
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Message" rows="8" required></textarea>
-        <button class="contact--button" type="submit">Send Message</button>
+        <button class="cta cta--outline" type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer--container">
-      <div class="icon-container">
-        <h3>Social</h3>
-        <ul class="icons-list">
-          <li><a class="icon-link" href="linkedin.com/in/kamofah"><img class="icon" src="./assets/icons/linkedin-icon.svg" alt="LinkedIn"></a></li>
-          <li><a class="icon-link" href="github.com/kamofah"><img class="icon" src="./assets/icons/github-logo.svg" alt="GitHub"></a></li>    
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__section">
+        <div class="site-footer__section-head">
+          <h3 class="site-footer__heading">Menu</h3>
+        </div>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="#HOME">Home</a></li>
+          <li><a class="site-footer__link" href="#ABOUT">About</a></li>
+          <li><a class="site-footer__link" href="#TECH_STACK">Tech Stack</a></li>
+          <li><a class="site-footer__link" href="#SELECTED_WORKS">Selected Works</a></li>
+          <li><a class="site-footer__link" href="#CONTACT">Get in touch</a></li>
         </ul>
       </div>
-      <div class="footer--text-container">  
-        <p>© Copyright 2024. Made by Kwaku Amofah-Boafo</p>
+      <div class="site-footer__section">
+        <div class="site-footer__section-head">
+          <h3 class="site-footer__heading">Social</h3>
+        </div>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="https://www.linkedin.com/in/kamofah/">LinkedIn</a></li>
+          <li><a class="site-footer__link" href="https://github.com/kamofah">GitHub</a></li>    
+          <li><a class="site-footer__link" href="https://x.com/_therealkwaku">X/Twitter</a></li>
+          <li><a class="site-footer__link" href="https://medium.com/@kamofah">Medium</a></li>
+          <li><a class="site-footer__link" href="mailto:boafo819@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__legal">
+        <p class="site-footer__copyright">© 2026 Kwaku Amofah-Boafo <br>
+          All rights reserved</p>
       </div>
     </div>
   </footer>
