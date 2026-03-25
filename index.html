@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <script src="./clock.js" defer></script>
+  <script src="./darkMode.js" defer></script>
   <title>KWAKU.DEV</title>
 </head>
 <body>
@@ -37,68 +39,74 @@
     <section class="hero" id="HOME">
       <div class="hero__content">
         <p class="hero__tagline">Hi, I'm Kwaku 👋</p>
-        <h1 class="hero__display-name">
+        <h1 class="hero__display-name grainy-text">
           Fullstack <span class="hero__emphasis">&</span><br>
           mobile <span class="hero__emphasis">engineer.</span>
         </h1>
-        <div class="hero__actions">
-          <a class="cta" href="#CONTACT">Get in touch</a>
-          <a class="cta cta--outline" href="#SELECTED_WORKS">View Selected Works</a>
+        <ul class="hero__actions">
+          <li class="hero__action-item"><a class="cta" href="#CONTACT">Get in touch</a></li>
+          <li class="hero__action-item"><a class="cta cta--outline" href="#SELECTED_WORKS">View Selected Works</a></li>
+        </ul>
+      </div>
+      <div class="hero-bottom-container">
+        <div class="clock-container">
+          <p class="clock-container-text">local time</p>
+          <p id="clock"></p>
+        </div>
+        <div class="scroll-indicator-container">
+          <div class="scroll-indicator-icon">
+            <p class="scroll-indicator-icon">↓</p>
+          </div>
+          <div class="scroll-indicator-text">
+            <p>Scroll down</p>
+          </div>
+        </div>
+        <div class="dark-mode-toggle-container">
+          <div class="dark-mode-toggle-icon">
+            <p>🌙</p>
+          </div>
+          <div class="dark-mode-toggle-switch">
+            <div class="dark-mode-toggle-slider"></div>
+          </div>
         </div>
       </div>
-      <!-- <div class="scroll-indicator-container">
-        <div class="scroll-indicator-icon">
-          
-        </div>
-        <div class="scroll-indicator-text">
-          <p>Scroll down</p>
-        </div>
-      </div> -->
     </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="ABOUT">
-      <div class="about__layout">
-        <div class="about__intro">
-          <h2 class="about__title">About</h2>
-          <!-- <p class="about__subtitle">NYC Based Software Engineer</p> -->
-        </div>
-        <div class="about__columns">
-          <div class="about__column">
-            <h3 class="about__section-heading">BACKGROUND</h3>
-            <p class="about__copy">
-              👋🏾 Hi, I’m Kwaku — a software engineer and product builder based in NYC.<br><br>
-              I previously worked at Google on the Ads team, building scalable,
-              data-driven and A/B tested Ad formats.
-              I hold a B.S. in Computer Science with a minor in Sports Analytics from Syracuse University.<br><br>
-              Today, I focus on building modern web and mobile applications end-to-end
-              using React, React Native, and Node.js, with an emphasis on intuitive
-              products that scale well and fit naturally into everyday life.
-            </p>
+    <!-- EXPERIENCE -->
+    <section class="experience" id="EXPERIENCE">
+      <div class="experience__layout">
+        <h2 class="experience__title">Experience</h2>
+      </div>
+      <div class="experience__items">
+        <div class="experience__item">
+          <div class="experience__item-date-container">
+            <p class="experience__item-date">Aug 2024 - Jan 2026</p>
           </div>
-          <div class="about__column">
-            <img class="about__portrait" src="./assets/Afrotech Picture.jpg" alt="A headshot of Kwaku">
-          </div>
-          <!-- <div class="about__skills">
-            <div class="about__skills-inner">
-              <h3 class="about__skills-heading">SKILLS</h3>
-              <ul class="about__skill-list">
-                <li class="about__skill-tag">JavaScript/TypeScript</li>
-                <li class="about__skill-tag">React</li>
-                <li class="about__skill-tag">Next.JS</li>
-                <li class="about__skill-tag">React Native (Expo)</li>
-                <li class="about__skill-tag">Tailwind</li>
-                <li class="about__skill-tag">Node.JS</li>
-                <li class="about__skill-tag">Express</li>
-                <li class="about__skill-tag">PostgreSQL</li>
-                <li class="about__skill-tag">Prisma</li>
-                <li class="about__skill-tag">Supabase</li>
-                <li class="about__skill-tag">Clerk</li>
-                <li class="about__skill-tag">Git/Github</li>
-                <li class="about__skill-tag">Python</li>
-              </ul>
+          <div class="experience__info">
+            <div class="experience__item-title-container">
+              <h3 class="experience__item-title">Full-Time Software Engineer</h3>
+              <p class="experience__item-company">@ Google</p>
             </div>
-          </div> -->
+            <ul class="experience__item-description">
+              <li class="experience__item-description-item">Built and experimented on scalable and dynamic web and mobile ad formats for various advertisers and partners</li>
+              <li class="experience__item-description-item">Conducted data driven A/B tests and iterative experiments to increase performance and user engagement</li>
+              <li class="experience__item-description-item">Collaborated with a team of UI/UX designers and product managers to deliver aesthetic user ad experiences</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience__item">
+          <p class="experience__item-date">Aug 2023 - Dec 2023</p>
+          <div class="experience__info">
+            <div class="experience__item-title-container">
+              <h3 class="experience__item-title">Teaching Assistant</h3>
+              <p class="experience__item-company">@ Syracuse University</p>
+            </div>
+            <ul class="experience__item-description">
+              <li class="experience__item-description-item">Assisted in teaching a course on the foundational and fundamental concepts of Python programming</li>
+              <li class="experience__item-description-item">Led weekly office hours and provided technical support to students in the Computer Science department</li>
+              <li class="experience__item-description-item">Helped students understand and implement algorithms and data structures</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -113,7 +121,6 @@
           <li class="tech-stack__item"><img src="./assets/icons/nextjs-logo.svg" alt="Next.JS"></li>
           <li class="tech-stack__item"><img src="./assets/icons/postgresql-logo.svg" alt="PostgreSQL"></li>
           <li class="tech-stack__item"><img src="./assets/icons/prisma-logo.svg" alt="Prisma"></li>
-
           <!-- <li class="tech-stack__item"><img src="./assets/icons/express-logo.svg" alt="Express"></li> -->
           <li class="tech-stack__item"><img src="./assets/icons/expo-logo.svg" alt="React Native"></li>
           <li class="tech-stack__item"><img src="./assets/icons/tailwind-logo.svg" alt="Tailwind"></li>
@@ -127,7 +134,7 @@
     <!-- SELECTED WORKS -->
     <section class="work-showcase" id="SELECTED_WORKS">
       <div class="work-showcase__intro">
-        <h2 class="work-showcase__title">Selected Works</h2>
+        <h2 class="work-showcase__title">Work</h2>
       </div>
       <div class="work-showcase__layout">
         <div class="work-showcase__table-of-contents">
@@ -185,10 +192,34 @@
       </div>
     </section>
 
+        <!-- ABOUT -->
+        <section class="about" id="ABOUT">
+          <div class="about__layout">
+            <div class="about__intro">
+              <h2 class="about__title">About</h2>
+              <!-- <p class="about__subtitle">NYC Based Software Engineer</p> -->
+            </div>
+            <div class="about__columns">
+              <div class="about__column">
+                <p class="about__copy">
+                  I’m a Ghanaian software engineer and product-focused builder based in New York City. 
+                  In 2024, I graduated with a B.S. in Computer Science with a minor in Sports Analytics from Syracuse University. 
+                  <br><br>
+                  Today, I build end-to-end web and mobile applications using React, React Native, and TypeScript. 
+                  I enjoy turning ideas into real, user-facing products that sit at the intersection of engineering, product, and user experience 
+                  — focusing on clean design, strong performance, and systems that scale. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
     <!-- CONTACT -->
     <section class="contact" id="CONTACT">
-      <h2 class="contact__title">contact</h2>
-      <p class="contact__lead">Get in touch with me:</p>
+      <div class="contact__layout">
+        <h2 class="contact__title">Let's Make Magic</h2>
+      </div>
+      <!-- <p class="contact__lead">Get in touch with me:</p> -->
       <form class="contact__form" action="https://formspree.io/f/xgedgpyk" method="POST">
         <label for="name">Name</label>
         <input id="name" type="text" placeholder="Name" required/> 
