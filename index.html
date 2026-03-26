@@ -7,14 +7,14 @@
   <link rel="icon" type="image/png" href="./assets/favicon.png">
   <script src="./clock.js" defer></script>
   <script src="./darkMode.js" defer></script>
-  <title>KWAKU.DEV</title>
+  <title>KWAKU.CODES</title>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="site-header__brand">
-      <h1 class="site-header__wordmark">kwaku.dev</h1>
+      <h1 class="site-header__wordmark">kwaku.codes</h1>
     </div>
     <nav class="site-header__nav" aria-label="Primary">
       <ul class="site-header__menu">
@@ -25,7 +25,7 @@
           <a class="site-header__link" href="#ABOUT">About</a>
         </li>
         <li class="site-header__menu-item">
-          <a class="site-header__link" href="#SELECTED_WORKS">Selected Works</a>
+          <a class="site-header__link" href="#SELECTED_WORKS">Selected Work</a>
         </li>
         <li class="site-header__menu-item">
           <a class="cta" href="#CONTACT">Get in touch</a>
@@ -45,7 +45,7 @@
         </h1>
         <ul class="hero__actions">
           <li class="hero__action-item"><a class="cta" href="#CONTACT">Get in touch</a></li>
-          <li class="hero__action-item"><a class="cta cta--outline" href="#SELECTED_WORKS">View Selected Works</a></li>
+          <li class="hero__action-item"><a class="cta cta--outline" href="#SELECTED_WORKS">View Selected Work</a></li>
         </ul>
       </div>
       <div class="hero-bottom-container">
@@ -131,8 +131,8 @@
       </div>
     </section>
     
-    <!-- SELECTED WORKS -->
-    <section class="work-showcase" id="SELECTED_WORKS">
+    <!-- WORK -->
+    <!-- <section class="work-showcase" id="SELECTED_WORKS">
       <div class="work-showcase__intro">
         <h2 class="work-showcase__title">Work</h2>
       </div>
@@ -179,7 +179,7 @@
                 </div>
               </div>
           </div>
-          <!-- <div class="work-showcase__project">
+          <div class="work-showcase__project">
             <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
           </div> -->
           <!-- <div class="work-showcase__project">
@@ -187,32 +187,78 @@
           </div>
           <div class="work-showcase__project">
             <img class="work-showcase__media" src="./assets/Afrotech Picture.jpg" alt="Queued Up">
-          </div> -->
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- WHAT IM BUILDING NOW -->
+    <section class="currently_building" id="WHAT_IM_BUILDING_NOW">
+      <div class="currently_building__layout">
+        <h2 class="currently_building__title">Currently Building</h2>
+      </div>
+      <div class="currently_building__projects">
+        <div class="currently_building__project-container">
+          <div class="currently_building__project-image-container">
+            <img class="currently_building__project-image" src="./assets//about/cinematic_shot.JPEG" alt="Cinematic Shot">
+          </div>
+          <div class="currently_building__project">
+            <h3 class="currently_building__project-title">Tally</h3>
+            <p class="currently_building__project-description">
+              Tally is a constraint-based word puzzle game where players must uncover a hidden word by reasoning about cost.
+              <br><br>
+              The game presents a grid of letters, where each row has an associated value. 
+              Players can form any valid word using the grid, but instead of being told the target cost, they must infer it through feedback.
+              After each guess, the game indicates whether the word is over, under, or exactly at the hidden budget—forcing players to iterate using both vocabulary and deduction.
+              <br><br>
+              This creates a unique gameplay loop that blends word formation with logical inference, 
+              rewarding players for identifying patterns in both language and cost structure.
+            </p>
+            <ul class="currently_building__tags">
+              <li class="currently_building__tag">React</li>
+              <li class="currently_building__tag">TypeScript</li>
+              <li class="currently_building__tag">Next.js</li>
+              <li class="currently_building__tag">Tailwind</li>
+              <li class="currently_building__tag">Supabase</li>
+              <li class="currently_building__tag">Clerk</li>
+              <li class="currently_building__tag">Vercel</li>
+              <li class="currently_building__tag">Framer Motion</li>
+            </ul>
+            <ul class="currently_building__actions">
+              <li><a class="cta" href="#">View Project</a></li>
+              <li><a class="cta cta--outline" href="#">View Code</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-        <!-- ABOUT -->
-        <section class="about" id="ABOUT">
-          <div class="about__layout">
-            <div class="about__intro">
-              <h2 class="about__title">About</h2>
-              <!-- <p class="about__subtitle">NYC Based Software Engineer</p> -->
-            </div>
-            <div class="about__columns">
-              <div class="about__column">
-                <p class="about__copy">
-                  I’m a Ghanaian software engineer and product-focused builder based in New York City. 
-                  In 2024, I graduated with a B.S. in Computer Science with a minor in Sports Analytics from Syracuse University. 
-                  <br><br>
-                  Today, I build end-to-end web and mobile applications using React, React Native, and TypeScript. 
-                  I enjoy turning ideas into real, user-facing products that sit at the intersection of engineering, product, and user experience 
-                  — focusing on clean design, strong performance, and systems that scale. 
-                </p>
-              </div>
-            </div>
+    <!-- ABOUT -->
+    <section class="about" id="ABOUT">
+      <div class="about__layout">
+        <div class="about__intro">
+          <h2 class="about__title">About</h2>
+          <!-- <p class="about__subtitle">NYC Based Software Engineer</p> -->
+        </div>
+        <div class="about__columns">
+          <div class="about__images-container">
+            <img class="about__image" src="./assets/about/cinematic_shot.JPEG" alt="Kwaku Amofah-Boafo">
+            <img class="about__image" src="./assets/about/academic_shot.JPG" alt="Kwaku Amofah-Boafo">
+            <!-- <img class="about__image" src="./assets/corporate_shot.jpg" alt="Kwaku Amofah-Boafo"> -->
           </div>
-        </section>
+          <div class="about__column">
+            <p class="about__copy">
+              I’m a Ghanaian software engineer and product-focused builder based in New York City. 
+              In 2024, I graduated with a B.S. in Computer Science with a minor in Sports Analytics from Syracuse University. 
+              <br><br>
+              Today, I build end-to-end web and mobile applications using React, React Native, and TypeScript. 
+              I enjoy turning ideas into real, user-facing products that sit at the intersection of engineering, product, and user experience 
+              — focusing on clean design, strong performance, and systems that scale. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section class="contact" id="CONTACT">

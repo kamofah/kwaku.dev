@@ -8,13 +8,15 @@
    ============================================================================= */
 :root {
     --main-color: #e34234;
+    --main-color-transparent: rgba(227, 66, 52, 0.80);
     --primary-color: #3a3a3a;
-    --color-neutral-0: #F6F5F3; /* white */
+    --color-neutral-0: #FFFFFF; /* white */
     --color-neutral-0-transparent: rgba(255, 255, 255, 0.85); /* white */
     --color-neutral-900: #000000; /* black */
     --color-bg-muted: rgb(23 23 23); /* light gray */
     --color-bg-muted-2: rgba(105, 105, 105, 0.25); /* dark gray */
     --color-bg-muted-3: rgba(45, 45, 45, 0.25); /* dark gray */
+    --color-bg-muted-4: rgba(45, 45, 45, 0.60); /* dark gray */
 }
 
 /* =============================================================================
@@ -359,8 +361,8 @@ footer {
     cursor: pointer;
     gap: 10px;
     box-shadow:
-        inset 4px 4px 8px rgba(0, 0, 0, 0.14),
-        inset -4px -4px 10px rgba(255, 255, 255, 0.75);
+        inset 4px 4px 8px rgba(0, 0, 0, 0.54),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.15);
 }
 
 .dark-mode-toggle-slider {
@@ -371,8 +373,8 @@ footer {
     border-radius: 50%;
     background-color: var(--color-neutral-0);
     box-shadow:
-        2px 3px 6px rgba(0, 0, 0, 0.12),
-        -2px -2px 5px rgba(255, 255, 255, 0.85);
+        2px 3px 6px rgba(0, 0, 0, 0.54),
+        -2px -2px 5px rgba(255, 255, 255, 0.15);
 }
 
 @keyframes fill-color {
@@ -499,6 +501,110 @@ footer {
     color: var(--main-color);
 }
 
+/* =============================================================================
+   Currently building
+   ============================================================================= */
+.currently_building {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.currently_building__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-bg-muted-2);
+}
+
+.currently_building__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.currently_building__project {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.currently_building__project-title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "IBM Plex Serif", serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.currently_building__project-description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-neutral-900);
+    width: 80%;
+}
+
+.currently_building__tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 50rem;
+    align-items: center;
+}
+
+.currently_building__tag {
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: var(--color-neutral-900-transparent);
+    border: 1px solid var(--color-bg-muted-4);
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-0);
+    }
+}
+
+.currently_building__actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.currently_building__action {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-neutral-900);
+    padding: 10px 20px;
+    border-radius: 99px;
+}
+
+.currently_building__project-container {
+    display: flex;
+    gap: 10rem;
+    width: 100%;
+}
+
+.currently_building__project-image {
+    width: 65rem;
+    height: 55rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
 /* =============================================================================
    About (skills block in comments uses about__* prefixed classes)
@@ -510,6 +616,31 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+.about__images-container {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__image {
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    }
 }
 
 .about__intro {
@@ -572,8 +703,9 @@ footer {
 .about__title,
 .tech-stack__title,
 .contact__title,
-.work-showcase__title {
-    font-size: 12rem;
+.work-showcase__title,
+.currently_building__title {
+    font-size: 11rem;
     letter-spacing: -.05em;
     text-transform: uppercase;
     font-weight: bold;
@@ -598,6 +730,7 @@ footer {
 
 .work-showcase__title {
     text-align: left;
+    border-bottom: 1px solid var(--color-bg-muted-2);
 }
 
 .work-showcase__subtitle {
